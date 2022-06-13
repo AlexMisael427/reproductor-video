@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css" />
+    <link href="./assets/css/video-js.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  
+    <title>Reproductor de video</title>
+  </head>
+  <body>
+    <br />
+    <br />
+    <div class="container">
+        <div id="videoPicture" style="width: 100%;">
+                <video class=" video-js vjs-16-9 vjs-big-play-centered " poster="./assets/images/poster1.jpeg"
+                    data-setup='{ "playbackRates": [0.5, 1, 1.5, 2] }' controls id="repro">
+                    <source src="./assets/videos/flor.mp4" type="video/mp4">
+                    <track kind="captions" label="English" srclang="en"
+                        src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.en.vtt" default="">
+                    <track kind="captions" label="Français" srclang="fr"
+                        src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.fr.vtt">
+                </video>
+               
+        </div>
+        <div id="videoList">
+            <div class="imgDiv">
+                <img id="video1" class="imgCaption" onmouseover="selectVideo(video1)" onclick="playSelectedVudeo(video1)"
+                    src="./assets/images/poster1.jpeg" alt="">
+            </div>
+            <br>
+            <div class="imgDiv">
+                <img id="video2" class="imgCaption" onmouseover="selectVideo(video2)" onclick="playSelectedVudeo(video2)"
+                    src="./assets/images/poster2.png" alt="">
+            </div>
+            <br>
+            <div class="imgDiv">
+                <img id="video3" class="imgCaption" onmouseover="selectVideo(video3)" onclick="playSelectedVudeo(video3)"
+                    src="./assets/images/poster3.png" alt="">
+            </div>
+        </div>
+    </div>
+
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="modalImagen" tabindex="-1" role="dialog" aria-labelledby="modalImagenLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalImagenLabel">Captura de imagen</h5>
+          <button onclick="closeModal()"  type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div id="divImg">
+                <canvas id="frame" width="480" height="320"></canvas>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button onclick="closeModal()" type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <button onclick="download()" type="button" class="btn btn-primary">Descargar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+   
+    <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./assets/scripts/video.min.js"></script>
+    <script src="./assets/scripts/controller.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+  </body>
+</html>

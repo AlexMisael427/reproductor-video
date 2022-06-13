@@ -1,0 +1,64 @@
+
+
+body{
+    background-color: whitesmoke;
+}
+
+.container{
+    background-color: silver;
+    border-radius: 100 px;
+    height: 60vh;
+    display: flex;
+}
+
+.imgDiv{
+    width:100%;
+}
+
+.imgCaption{
+    width: 45%;
+    border-top: 3px solid white;
+    border-right: 4px solid white;   
+    border-bottom: 4px solid white;
+    border-left: 4px solid white;
+}
+
+.imgCaptionSelected{
+    width: 45%;
+    border-top: 3px solid red;
+    border-right: 4px solid red;   
+    border-bottom: 4px solid red;
+    border-left: 4px solid red;
+}
+
+
+#videoList{
+    padding: 10px;
+}
+
+.video-js .vjs-control-bar{
+    background-color: lightyellow;
+}
+
+.video-js .vjs-play-progress, .video-js  .vjs-volume-level{
+    background-color: darkcyan;
+}
+.video-js .vjs-progress-control, .video-js .vjs-volume-panel .vjs-control .vjs-volume-panel-horizontal{
+    color: aqua;
+}
+
+.video-js .vjs-control{
+    color: chocolate;
+}
+
+.spanImg{
+    cursor: pointer
+  }
+
+.iconImg{
+    width: 30%;
+}  
+
+#divImg{
+    height: 60vh;
+}
