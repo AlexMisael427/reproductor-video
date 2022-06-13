@@ -41,7 +41,7 @@ var volumePanel =  reproductor.controlBar.getChild('VolumePanel');
 var indexPT = reproductor.controlBar.children().indexOf(volumePanel)
 var next = reproductor.controlBar.addChild("button", {}, indexPT);
 var nextDom = next.el();
-nextDom.innerHTML = "<span class='spanImg'><img src='./assets/images/d.png' class= 'iconImg' alt=''></span>";
+nextDom.innerHTML = "<span class='spanImg'><img src='./assets/images/d.png' class= 'iconImg spanImg' alt=''></span>";
 
 nextDom.onclick = function(){
 
